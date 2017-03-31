@@ -13,14 +13,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var latitude: UILabel!
     @IBOutlet weak var longitude: UILabel!
-    @IBOutlet weak var distance: UILabel!
+//    @IBOutlet weak var distance: UILabel!
     
     var locationManager: CLLocationManager = CLLocationManager()
     var startLocation: CLLocation!
 
-    @IBAction func resetDistance(_ sender: AnyObject) {
-        startLocation = nil
-    }
+//    @IBAction func resetDistance(_ sender: AnyObject) {
+//        startLocation = nil
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,10 +46,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             startLocation = latestLocation
         }
         
-        let distanceBetween: CLLocationDistance =
-            latestLocation.distance(from: startLocation)
+//        let distanceBetween: CLLocationDistance =
+//            latestLocation.distance(from: startLocation)
         
-        distance.text = String(format: "%.2f", distanceBetween)
+//        distance.text = String(format: "%.2f", distanceBetween)
     }
     
     func locationManager(_ manager: CLLocationManager,
