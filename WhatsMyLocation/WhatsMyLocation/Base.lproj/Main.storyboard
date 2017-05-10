@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,40 +22,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Latitude" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWY-1h-BYJ">
-                                <rect key="frame" x="0.0" y="93" width="375" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Latitude" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWY-1h-BYJ">
+                                <rect key="frame" x="0.0" y="95" width="375" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Longitude" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORy-QS-4TU">
-                                <rect key="frame" x="0.0" y="205" width="375" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Updating..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNl-bx-unx">
+                                <rect key="frame" x="0.0" y="252" width="375" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Updating..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Bd-HL-rBb">
+                                <rect key="frame" x="0.0" y="124" width="375" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wFY-mu-ifF">
+                                <rect key="frame" x="0.0" y="329" width="375" height="338"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="338" id="GgM-Fa-1cK"/>
+                                </constraints>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Longitude" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORy-QS-4TU">
+                                <rect key="frame" x="0.0" y="202" width="375" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="shf-u1-v26"/>
+                                    <constraint firstAttribute="width" secondItem="ORy-QS-4TU" secondAttribute="height" multiplier="25:2" id="tdY-qN-9do"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Updating..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNl-bx-unx">
-                                <rect key="frame" x="0.0" y="250" width="375" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Updating..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Bd-HL-rBb">
-                                <rect key="frame" x="0.0" y="122" width="375" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EWY-1h-BYJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2DR-fZ-uY8"/>
+                            <constraint firstItem="wFY-mu-ifF" firstAttribute="leading" secondItem="8Bd-HL-rBb" secondAttribute="leading" id="9FS-08-Th6"/>
+                            <constraint firstAttribute="trailing" secondItem="wFY-mu-ifF" secondAttribute="trailing" id="CcK-nf-s4n"/>
+                            <constraint firstItem="wFY-mu-ifF" firstAttribute="trailing" secondItem="8Bd-HL-rBb" secondAttribute="trailing" id="Dht-Je-YPL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wFY-mu-ifF" secondAttribute="bottom" id="IOh-Tc-Zko"/>
+                            <constraint firstItem="mNl-bx-unx" firstAttribute="top" secondItem="ORy-QS-4TU" secondAttribute="bottom" constant="20" id="JhF-vL-4e1"/>
+                            <constraint firstItem="wFY-mu-ifF" firstAttribute="leading" secondItem="ORy-QS-4TU" secondAttribute="leading" id="MhW-yq-xwi"/>
+                            <constraint firstItem="ORy-QS-4TU" firstAttribute="top" secondItem="EWY-1h-BYJ" secondAttribute="bottom" constant="77" id="TxQ-lS-sOa"/>
+                            <constraint firstItem="wFY-mu-ifF" firstAttribute="trailing" secondItem="mNl-bx-unx" secondAttribute="trailing" id="bVm-4v-Ju9"/>
+                            <constraint firstItem="wFY-mu-ifF" firstAttribute="top" secondItem="mNl-bx-unx" secondAttribute="bottom" constant="29" id="dIJ-NP-fT8"/>
+                            <constraint firstItem="wFY-mu-ifF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nFV-PX-aNY"/>
+                            <constraint firstItem="wFY-mu-ifF" firstAttribute="leading" secondItem="mNl-bx-unx" secondAttribute="leading" id="o7b-4e-fGp"/>
+                            <constraint firstItem="ORy-QS-4TU" firstAttribute="top" secondItem="8Bd-HL-rBb" secondAttribute="bottom" constant="30" id="oBB-Pw-b8V"/>
+                            <constraint firstItem="8Bd-HL-rBb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="104" id="oOL-Vq-Kqh"/>
+                            <constraint firstItem="EWY-1h-BYJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="75" id="ouT-HJ-cG8"/>
+                            <constraint firstAttribute="trailing" secondItem="EWY-1h-BYJ" secondAttribute="trailing" id="wdk-CT-B4s"/>
+                            <constraint firstItem="wFY-mu-ifF" firstAttribute="trailing" secondItem="ORy-QS-4TU" secondAttribute="trailing" id="yqk-ld-C54"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="latitude" destination="8Bd-HL-rBb" id="irF-CH-mc2"/>
-                        <outlet property="longitude" destination="mNl-bx-unx" id="wNc-xc-ffv"/>
+                        <outlet property="latitudeLabel" destination="8Bd-HL-rBb" id="UZ2-sV-mx3"/>
+                        <outlet property="longitudeLabel" destination="mNl-bx-unx" id="XBF-wY-WhH"/>
+                        <outlet property="mapView" destination="wFY-mu-ifF" id="QdC-Rc-G25"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
